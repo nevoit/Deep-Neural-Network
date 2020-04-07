@@ -31,7 +31,7 @@ We chose to implement the dropout bonus. We did this by creating a new data fram
 Lastly, we take the neuron’s output and scale it up by dividing it by 1-r. For example, if we have u units (u neurons) in the current hidden layer (l), the output of the activation function will be reduced by 100* r percent, and on average we end up with u*r ignored neurons.
 
 This means the value of the input of the next hidden layer is:
-$$ Z^{(l+1)}=w^{(i+1)}*a^{l}+b^{(i+1)}$$
+<img src="https://render.githubusercontent.com/render/math?math=Z^{l%2B1}=w^{i%2B1}*a^{l}+b^{i%2B1}">
 By dividing $$a^l$$ by $$1-r$$ will bump up it back up the roughly $r$ percent, so it will not change the expected value of $$a^l$$. This technique called the inverted dropout and this effect is that no matter what we define as the dropout rate, this inverted dropout ensures that the expected value of $$a^l$$ remains the same. This technique should help in the testing stage since we have less of scaling problem.
 Please note that we do not use the dropout during the testing and also we do not use the dropout on the output layer.
 
