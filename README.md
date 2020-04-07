@@ -41,7 +41,7 @@ After implementing our DNN, we needed to not only see how batch normalization an
 
 We performed four different experiments:
 
-#### Expierment 1: Basic DNN, without batch normalization or dropout: 
+### Expierment 1: Basic DNN, without batch normalization or dropout: 
 
 | Final Accuracy      | Results |
 | --------- | -----:|
@@ -53,7 +53,7 @@ We performed four different experiments:
 
 **Training Time :**  71.68 seconds / 10,600 iterations
 
-#### Expierment 2: With batch normalization and without dropout:
+### Expierment 2: With batch normalization and without dropout:
 We found that a beta of 0.1 and Gamma of 1 leaded to good results.
 
 | Final Accuracy      | Results |
@@ -67,7 +67,7 @@ We found that a beta of 0.1 and Gamma of 1 leaded to good results.
 **Training Time :**  116 seconds / 18,300 iterations
 It is evident that batch normalization helped the results, albeit slightly. However, the run time was quite longer.
 
-#### Expierment 3: Without batch and with dropout
+### Expierment 3: Without batch and with dropout
 We used a dropout rate of 10% in this experiment:
 
 | Final Accuracy      | Results |
@@ -82,7 +82,7 @@ We used a dropout rate of 10% in this experiment:
 Dropout by itself reduced the performance significantly, although the neural network converged quickly (although this doesn’t hold much weight when the results are so lackluster)
 
 
-#### Expierment 4: With both batch normalization and dropout:
+### Expierment 4: With both batch normalization and dropout:
 We used the same parameters as before (beta 0.1, gamma 1, dropout rate of 10%)
 
 | Final Accuracy      | Results |
