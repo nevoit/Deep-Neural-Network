@@ -4,6 +4,8 @@ The data was loaded through the keras API for Python. As was specified, 20% of t
 The input layer receives a single 1d array, so the images had to be slightly manipulated. Since each image is 28*28 pixels, a total of 738 pixels, we reshaped each image into a 1d array. This array serves as the input to the network. Additionally, this is a multi-class problem with 10 possible classes, so the output layer has 10 neurons.
 Therefore, the architecture of the network is [784, 20, 7, 5, 10] neurons (the number of neurons in the hidden layers is taken from the assignment guidelines). The learning rate is 0.009, and we used batch sizes of 512 and up to 100,000 iterations (around 1066 epochs). The size of the training set is 48,000 samples (i.e. 94 iterations per epoch). We found success with these parameters.
 
+Submitted by: Tomer Shahar and Nevo Itzhak
+
 # Additional Functions:
 We added several useful functions to our code, mostly for code clarity.
 - **Image_classification_experiments**:
