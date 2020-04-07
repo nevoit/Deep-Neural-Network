@@ -32,7 +32,8 @@ Lastly, we take the neuron’s output and scale it up by dividing it by 1-r. For
 
 This means the value of the input of the next hidden layer is:
 <img src="https://render.githubusercontent.com/render/math?math=Z^{l%2B1}=w^{i%2B1}*a^{l}+b^{i%2B1}">
-By dividing $$a^l$$ by $$1-r$$ will bump up it back up the roughly $r$ percent, so it will not change the expected value of $$a^l$$. This technique called the inverted dropout and this effect is that no matter what we define as the dropout rate, this inverted dropout ensures that the expected value of $$a^l$$ remains the same. This technique should help in the testing stage since we have less of scaling problem.
+
+By dividing <img src="https://render.githubusercontent.com/render/math?math=a^l"> by <img src="https://render.githubusercontent.com/render/math?math=1-r"> will bump up it back up the roughly <img src="https://render.githubusercontent.com/render/math?math=r"> percent, so it will not change the expected value of <img src="https://render.githubusercontent.com/render/math?math=a^l">. This technique called the inverted dropout and this effect is that no matter what we define as the dropout rate, this inverted dropout ensures that the expected value of <img src="https://render.githubusercontent.com/render/math?math=a^l"> remains the same. This technique should help in the testing stage since we have less of scaling problem.
 Please note that we do not use the dropout during the testing and also we do not use the dropout on the output layer.
 
 
