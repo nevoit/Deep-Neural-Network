@@ -1,4 +1,5 @@
 # Deep-Neural-Network
+In this assignment we were tasked with creating a Deep Neural Network that can classify images from the MNIST database. 
 ## Purposes of The Assignment 
 Enabling students to experiment with building a simple neural network “from scratch” and to obtain a deep understanding of the forward/backward propagation process. 
 The network needs to be implemented using vectorization.
@@ -11,7 +12,6 @@ The network needs to be implemented using vectorization.
 - **Bonus** - modify the code so that it supports the dropout functionality. In addition to the code, please provide a short explanation about the changes done in the code. Compare the performance of the modified network to the original
 
 ## More Information
-In this assignment we were tasked with creating a Deep Neural Network that can classify images from the MNIST database.
 The data was loaded through the Keras API for Python.
 As was specified, 20% of the training data was used as a validation set in order to track our progress between training iterations.
 The input layer receives a single 1d array, so the images had to be slightly manipulated.
