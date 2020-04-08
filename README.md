@@ -113,4 +113,5 @@ We used the same parameters as before (beta 0.1, gamma 1, dropout rate of 10%)
 
 **Training Time :**  18.9 seconds / 2,700 iterations
 
-**Conclusion**: Although the results were much lower than without dropout, they were significantly better than using solely dropout without batch normalization. The neural network converged quite quickly as well. Batch normalization improved the results whenever it was used.
+## Conclusion
+Although the results were much lower than without dropout, they were significantly better than using solely dropout without batch normalization. The neural network converged quite quickly as well. Batch normalization improved the results whenever it was used.
