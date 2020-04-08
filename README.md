@@ -1,8 +1,23 @@
 # Deep-Neural-Network
+## Purposes of The Assignment 
+Enabling students to experiment with building a simple neural network “from scratch” and to obtain a deep understanding of the forward/backward propagation process. 
+The network needs to be implemented using vectorization.
+
+-	Implement the forward propagation process
+- Implement the backward propagation process
+- Train the network and produce predictions
+- Use the code you wrote to classify the MNIST dataset and present a summary report
+- Use the batchnorm function. Analyze and compare this experiment to the previous one (performance, running time, number of training steps etc.). There is no need to update the parameters of the batchnorm.
+- **Bonus** - modify the code so that it supports the dropout functionality. In addition to the code, please provide a short explanation about the changes done in the code. Compare the performance of the modified network to the original
+
+## More Information
 In this assignment we were tasked with creating a Deep Neural Network that can classify images from the MNIST database.
-The data was loaded through the keras API for Python. As was specified, 20% of the training data was used as a validation set in order to track our progress between training iterations.
-The input layer receives a single 1d array, so the images had to be slightly manipulated. Since each image is 28*28 pixels, a total of 738 pixels, we reshaped each image into a 1d array. This array serves as the input to the network. Additionally, this is a multi-class problem with 10 possible classes, so the output layer has 10 neurons.
-Therefore, the architecture of the network is [784, 20, 7, 5, 10] neurons (the number of neurons in the hidden layers is taken from the assignment guidelines). The learning rate is 0.009, and we used batch sizes of 512 and up to 100,000 iterations (around 1066 epochs). The size of the training set is 48,000 samples (i.e. 94 iterations per epoch). We found success with these parameters.
+The data was loaded through the Keras API for Python.
+As was specified, 20% of the training data was used as a validation set in order to track our progress between training iterations.
+The input layer receives a single 1d array, so the images had to be slightly manipulated.
+Since each image is 28*28 pixels, a total of 738 pixels, we reshaped each image into a 1d array. This array serves as the input to the network. Additionally, this is a multi-class problem with 10 possible classes, so the output layer has 10 neurons.
+Therefore, the architecture of the network is [784, 20, 7, 5, 10] neurons (the number of neurons in the hidden layers is taken from the assignment guidelines).
+The learning rate is 0.009, and we used batch sizes of 512 and up to 100,000 iterations (around 1066 epochs). The size of the training set is 48,000 samples (i.e. 94 iterations per epoch). We found success with these parameters.
 
 **Submitted by:** Tomer Shahar and Nevo Itzhak
 
@@ -33,7 +48,7 @@ We chose to implement the dropout bonus. We did this by creating a new data fram
 Lastly, we take the neuron’s output and scale it up by dividing it by 1-r. For example, if we have u units (u neurons) in the current hidden layer (l), the output of the activation function will be reduced by 100* r percent, and on average we end up with u*r ignored neurons.
 
 This means the value of the input of the next hidden layer is:
-<img src="https://render.githubusercontent.com/render/math?math=Z^{l%2B1}=w^{i%2B1}*a^{l}+b^{i%2B1}">
+<img src="https://render.githubusercontent.com/render/math?math=Z^{l%2B1}=w^{i%2B1}*a^{l}%2Bb^{i%2B1}">
 
 By dividing <img src="https://render.githubusercontent.com/render/math?math=a^l"> by <img src="https://render.githubusercontent.com/render/math?math=1-r"> will bump up it back up the roughly <img src="https://render.githubusercontent.com/render/math?math=r"> percent, so it will not change the expected value of <img src="https://render.githubusercontent.com/render/math?math=a^l">. This technique called the inverted dropout and this effect is that no matter what we define as the dropout rate, this inverted dropout ensures that the expected value of <img src="https://render.githubusercontent.com/render/math?math=a^l"> remains the same. This technique should help in the testing stage since we have less of scaling problem.
 Please note that we do not use the dropout during the testing and also we do not use the dropout on the output layer.
