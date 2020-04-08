@@ -1,5 +1,12 @@
 # Deep-Neural-Network
 In this assignment we were tasked with creating a Deep Neural Network that can classify images from the MNIST database. 
+
+![Results](https://github.com/nevoit/Deep-Neural-Network/blob/master/figures/res.png?raw=true "Results")
+
+## Authors
+* **Tomer Shahar** - [Tomer Shahar](https://github.com/Tomer-Shahar)
+* **Nevo Itzhak** - [Nevo Itzhak](https://github.com/nevoit)
+
 ## Purposes of The Assignment 
 Enabling students to experiment with building a simple neural network “from scratch” and to obtain a deep understanding of the forward/backward propagation process. 
 The network needs to be implemented using vectorization.
@@ -18,8 +25,6 @@ The input layer receives a single 1d array, so the images had to be slightly man
 Since each image is 28*28 pixels, a total of 738 pixels, we reshaped each image into a 1d array. This array serves as the input to the network. Additionally, this is a multi-class problem with 10 possible classes, so the output layer has 10 neurons.
 Therefore, the architecture of the network is [784, 20, 7, 5, 10] neurons (the number of neurons in the hidden layers is taken from the assignment guidelines).
 The learning rate is 0.009, and we used batch sizes of 512 and up to 100,000 iterations (around 1066 epochs). The size of the training set is 48,000 samples (i.e. 94 iterations per epoch). We found success with these parameters.
-
-**Submitted by:** Tomer Shahar and Nevo Itzhak
 
 # Additional Functions:
 We added several useful functions to our code, mostly for code clarity.
