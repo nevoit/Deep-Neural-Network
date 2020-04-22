@@ -1,6 +1,6 @@
 # Deep-Neural-Network
 In this assignment we were tasked with creating a Deep Neural Network that can classify images from the MNIST database. 
-A step-by-step neural network and deep learning tutorial you can find [here (DeepLearning.ai)](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0).
+A step-by-step neural network and deep learning tutorial you can find [here](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Ec-XTbcX1uRg2_u4xOEky0) and [here](https://www.youtube.com/playlist?list=PLkDaE6sCZn6Hn0vK8co82zjQtt3T2Nkqc).
 
 ![Results](https://github.com/nevoit/Deep-Neural-Network/blob/master/figures/res.png?raw=true "Results")
 
